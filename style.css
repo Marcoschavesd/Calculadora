@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.8);
+    background-color: rgba(190, 190, 190, 0.9);
+    border-radius: 8px;
+    width: 325px;
+    height: 420px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1px 1px;
+    grid-template-areas: "display display display display"
+                            "display display display display"
+                            "act act act act"
+                            "num num num operadores"
+                            "num num num operadores";
+}
+.display {
+    grid-area: display;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(3px);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    padding: 5px;
+    border-radius: 8px 8px 0 0;
+    font-size: 52px;
+}
+.act-pad {
+    grid-area: act;
+    background-color: #333333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.num-pad {
+    grid-area: num;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.operadores {
+    grid-area: operadores;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #333333;
+    border-radius: 0 0 8px 0;
+}
+/***BOTÕES***/
+.btn {
+    width: 80px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(3px);
+    font-size: 18px;
+}
+.btn-del {
+    width: 155px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(3px);
+    font-size: 18px;
+}
+/***EFEITOS***/
+.btn:hover,
+.btn-del:hover {
+    cursor: pointer;
+    background-color: aliceblue;
+    font-style: italic;
+}
